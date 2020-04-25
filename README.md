@@ -33,4 +33,9 @@ Notes:
 * Robert Moore
 * Paul Baker
 
+## Pictures
+
+* Included in workingpics folder
+
+
 
