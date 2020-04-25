@@ -1,2 +1,1 @@
-# Venue-Search
-A website for searching artist information and upcoming venues
+# unc_codingbootcamp_project1

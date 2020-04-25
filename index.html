@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The AVS</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+
+  <script src="assets/javascript/app.js"></script>
+
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Anton|Arvo|Josefin+Sans|Lobster|Merriweather|Noto+Sans|Pacifico|Staatliches&display=swap"
+    rel="stylesheet">
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark bg-transparent">
+    <a class="navbar-brand" href="#">Artist Venue Search</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row inputs">
+      <form class="col s6">
+        <div class="row">
+          <div class="input-field col s6">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Search for your favorite Artist!</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <button class="btn"> Submit </button>
+
+    <div class="row">
+      <div class="col-12  artistInfo">
+        <h3 id="artist-info">Songs to Preview</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <!-- The scope attribute specifies that this is a header for a column -->
+              <th scope="col">Artwork</th>
+              <th scope="col">Track Name</th>
+              <th scope="col">Preview URL</th>
+            </tr>
+          </thead>
+          <tbody class="iTunesPreview">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Insert additional movie rows here -->
+          </tbody>
+        </table>
+      </div>
+      <!-- <div class="col-1 blank">
+
+</div> -->
+
+
+    </div>
+    <div class="row">
+      <div class="col-6 ticketinfo">
+        <h3 id="ticket-venue">Ticket and Venue Info</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <!-- The scope attribute specifies that this is a header for a column -->
+              <th scope="col">Venue</th>
+              <th scope="col">City</th>
+              <th scope="col">State</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody class="td">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-1 blank">
+
+      </div>
+      <!-- <div class="col-4 youtubeDisplay">
+      <h3 id="youtube">Click to Play a Song!</h3>
+          <table class="table">
+              <thead>
+                <tr>
+               
+                  <th scope="col">Artwork</th>
+                  <th scope="col">Track Name</th>
+                  <th scope="col">Preview URL</th>
+                </tr>
+              </thead>
+              <tbody class="iTunesPreview">
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div> -->
+      <div class="col-4 searchbox">
+        <h3 id="recent-searches">Top Searches:</h3>
+        <table class="table">
+          <tbody class="topSearches">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+        <div id="search-filler-div">
+          <ol id="searchList"></ol>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Divs establishing background notes -->
+
+  <div class="note-1">
+    &#9835; &#9833;
+  </div>
+  <div class="note-2">
+    &#9833;
+  </div>
+  <div class="note-3">
+    &#9839; &#9834;
+  </div>
+  <div class="note-4">
+    &#9834;
+  </div>
+  <div class="note-5">
+    &#9836; &#9834; &#9833;
+  </div>
+  <div class="note-6">
+    &#9836;
+  </div>
+
+  <!-- </div> -->
+
+  <footer>
+    CopyRight @2019
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</body>
+
+</html>

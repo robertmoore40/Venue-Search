@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    
+    <!--- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <div id="trackName"></div>
+    <div id="albumName"></div>
+    <div id="releaseDate"></div>
+    <div id="previewUrl"></div>
+    <div id="artworkUrl"></div>
+
+    <script src="assets/javascript/caldwell_apple_api.js"></script>
+
+    <script>
+        search_results = "Blonde";
+
+        callItunesApi(search_results);
+        searchStats();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh; 
+    flex-direction: column;
+    background-image: url("audience-band-cheering-1105666 (1).jpg");
+    background-color: black;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  li {
+    color: white;
+  }
+
+  .searchbox {
+    background-color: rgb(105,105,105, 0.4);
+    height: 400px;
+    width: 100%;
+    margin: 20px 20px 40px 20px;
+    text-align: center;
+  }
+
+  .artistInfo {
+    background-color: rgb(105,105,105, 0.4);
+    height: 400px;
+    width: 100%;
+    margin: 20px;
+    overflow: auto;
+    color: white;
+  }
+  .footer-copyright {
+      background-color: #bbdefb blue;
+  }
+  .page-footer {
+      opacity: 0.4;
+  } 
+  .lighten-5 {
+    opacity: 0.4;
+  }
+  .transparentBG {
+    background-color: rgba(0,0,0,0);
+  }
+  footer {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    /* overflow: hidden; */
+    text-align: center;
+    }
+  .ticketinfo {
+    background-color: rgb(105,105,105, 0.4);
+    height: 400px;
+    width: 100%;
+    margin: 20px;
+    overflow: auto;
+  }
+  .recentsearches {
+    background-color: rgb(105,105,105, 0.4);
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+  }
+  .youtubeDisplay {
+    background-color: rgb(105,105,105, 0.4);
+    height: 200px;
+    width: 100%;
+    margin: 20px;
+  }
+  .navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+.navbar {
+  margin-bottom: 30px;
+}
+.navbar-brand {
+      font-family: 'Anton', sans-serif;    
+      font-size: 24px;
+}
+.inputs {
+    width: 100%;
+}
+h3 {
+
+    color:white;
+    /* font-family: 'Noto Sans', sans-serif; */
+      /* font-family: 'Anton', sans-serif; */
+      /* font-family: 'Josefin Sans', sans-serif; */
+      /* font-family: 'Lobster', cursive; */
+      /* font-family: 'Arvo', serif; */
+      /* font-family: 'Pacifico', cursive; */
+      font-family: 'Staatliches', cursive; 
+
+    
+}
+.table {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+#textarea1 {
+  color: white;
+  font-size: 25px;
+  font-family: 'Merriweather', serif;
+  margin-bottom: -48px;
+}  
+
+textarea:focus {
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important;
+}
+
+label.active {
+  color: white !important;
+}
+
+#ticket-venue, #artist-info, #recent-searches, #youtube {
+  text-align: center;
+}
+
+
+/* Establishing effects of floating background music notes */
+
+
+.note-1, .note-2, .note-3, .note-4, .note-5, .note-6 {
+  position: absolute;
+  animation: notes 2.5s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+}
+
+.note-1 {
+  top: 60%;
+  left: 42%;
+  animation-delay: 2s;
+}
+
+.note-2 {
+  top: 30%;
+  right: 30%;
+  animation-delay: 2.5s;
+}
+
+.note-3 {
+  top: 90px;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.note-4 {
+  top: 40%;
+  left: 15%;
+  animation-delay: 3s;
+}
+
+.note-5 {
+  top: 80%;
+  left: 15%;
+  animation-delay: 1s;
+}
+
+.note-6 {
+  top: 68%;
+  right: 22%; 
+  animation-delay: 1s;
+}
+
+@keyframes notes {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.5) translate(100%, -100%);
+  }
+  100% {
+    transform: scale(1.5) translate(100%, -100%);
+    opacity: 0;
+  }
+}
+
+
+/* Establishing Submit button effects */
+
+.btn{
+
+  background: rgb(105,105,105, 0.4);
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.btn:focus {
+  background:rgb(105,105,105, 0.4);
+  color:#fff;
+
+}
+
+
+
+.btn:hover{
+  background: #fff;
+  color: black;
+}
+.btn:before,.btn:after{
+
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:1.3px;
+  width:0;
+  background: rgb(105,105,105, 0.4);
+  transition:400ms ease all;
+
+}
+.btn:after{
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.btn:hover:before,.btn:hover:after{
+  width: 100%;
+  transition: 800ms ease all;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: lightgrey;
+}

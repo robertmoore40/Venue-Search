@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1 class="display-4">Artist Search</h1>
+    <p class="lead">Project 1</p>
+    <hr class="my-4">
+    <p>Type in a search term to add a search button</p>
+    <label for="queryElement-input">Search Term</label>
+    <input type="text" id="queryElement-input">
+    <input id="add-queryElement" type="submit" value="Artist Search">
+  </div>
+  <div class="-buttonHolderContainer">
+    <h1>Information Dump</h1>
+    <!-- Buttons created will be put here -->
+    <div class="container">
+      <div id="outputArea"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script>
+
+$("#add-queryElement").on("click", function (event) {
+  $("#outputArea").empty();
+  console.log("clicked");
+  event.preventDefault();
+  var artistInput = $("#queryElement-input").val().trim();
+  console.log(artistInput);
+  $("#queryElement-input").val("");
+  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&keyword=" +
+  artistInput + "&apikey=VNUkdWcssRsgC8X8Vg617XiGSpQQYPfV";
+  
+  $.ajax({
+  type:"GET",
+  url: queryURL,
+  async: true,
+  dataType: "json",
+  success: function(json) {
+              console.log(json);
+              
+  // var i;
+// for (i = 0; i < 5 || i < json._embedded.events.length ; i++) {
+//   console.log(json._embedded.events[i]._embedded.venues[0].name);
+//   console.log(json._embedded.events[i]._embedded.venues[0].city.name);
+//   console.log(json._embedded.events[i]._embedded.venues[0].state.name);
+//   console.log(json._embedded.events[i].dates.start.localDate);;
+// for (i = 0; i < 5 ; i++) {
+
+
+  var i;
+
+  for (i = 0; i < json._embedded.events.length ; i++) {
+    if (i >= 5) {
+      return 
+    }
+  console.log(json._embedded.events[i]._embedded.venues[0].name);
+  console.log(json._embedded.events[i]._embedded.venues[0].city.name);
+  console.log(json._embedded.events[i]._embedded.venues[0].state.name);
+  console.log(json._embedded.events[i].dates.start.localDate);;
+
+  
+  // $("#outputArea" ).append(artistInput);
+  var venueNameDiv = $("<p>").text(json._embedded.events[i]._embedded.venues[0].name);
+  $("#outputArea" ).append(venueNameDiv);  
+  var cityNameDiv = $("<p>").text(json._embedded.events[i]._embedded.venues[0].city.name);
+  $("#outputArea" ).append(cityNameDiv);  
+  var stateNameDiv = $("<p>").text(json._embedded.events[i]._embedded.venues[0].state.name);
+  $("#outputArea" ).append(stateNameDiv);  
+  var dateNameDiv = $("<p>").text(json._embedded.events[i].dates.start.localDate);
+  $("#outputArea" ).append(dateNameDiv); 
+  
+
+  // var venueNameDiv = $("<p>").text(json._embedded.events[i]._embedded.venues[0].name);
+  // var cityNameDiv = $("<p>").text(json._embedded.events[i]._embedded.venues[0].city.name);
+  // var stateNameDiv = $("<p>").text(json._embedded.events[i]._embedded.venues[0].state.name);
+  // var dateNameDiv = $("<p>").text(json._embedded.events[i].dates.start.localDate);
+}
+
+
+  // console.log(json._embedded.events[0]._embedded.venues[0].name);
+  // console.log(json._embedded.events[0]._embedded.venues[0].city.name);
+  // console.log(json._embedded.events[0]._embedded.venues[0].state.name);
+  // console.log(json._embedded.events[0].dates.start.localDate);
+
+
+  // $("#outputArea" ).append(artistInput);
+  // var venueNameDiv = $("<p>").text(json._embedded.events[0]._embedded.venues[0].name);
+  // $("#outputArea" ).append(venueNameDiv);  
+  // var cityNameDiv = $("<p>").text(json._embedded.events[0]._embedded.venues[0].city.name);
+  // $("#outputArea" ).append(cityNameDiv);  
+  // var stateNameDiv = $("<p>").text(json._embedded.events[0]._embedded.venues[0].state.name);
+  // $("#outputArea" ).append(stateNameDiv);  
+  // var dateNameDiv = $("<p>").text(json._embedded.events[0].dates.start.localDate);
+  // $("#outputArea" ).append(dateNameDiv);  
+  },})});
+ 
+//       // Looping through each result item
+//       for (var i = 0; i < results.length; i++) {
+//         // Creating and storing a div tag
+//         var queryDiv = $("<div>");
+//         // Creating a paragraph tag with the result item's rating
+//         var p = $("<p>").text("Rating: " + results[i].rating);
+//         // Creating and storing an image tag
+//         var queryImage = $("<img>");
+//         // Grab image and gif in a var
+//         // grabbed from response.data
+//         var picSource = results[i].images.fixed_width_still.url;
+//         var gifSource = results[i].images.fixed_width.url;
+//         // 200px wide picture
+//         // Setting the src attribute of the image to a property pulled off the result item
+//         queryImage.attr("src", results[i].images.fixed_width.url);
+//         queryImage.addClass("queryGiphy");
+//         // grab onto this when clicking gif
+//         // Set attributes
+//         // These values will be saved on the image
+//         // these values are based on our response
+//         queryImage.attr("data-toggle", "true");
+//         queryImage.attr("data-stillVersion", picSource);
+//         queryImage.attr("data-gifVersion", gifSource);
+//         // Appending the paragraph and image tag to the queryDiv
+//         queryDiv.append(p);
+//         queryDiv.append(queryImage);
+//         // Prependng the queryDiv to the HTML page in the "#gifs-appear-here" div
+//         $("#gifs-appear-here").prepend(queryDiv);
+//       }
+//     });
+// });
+</script>
+
+   
+</body>
+
+</html>
