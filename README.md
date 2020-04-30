@@ -13,7 +13,7 @@ Artist Venue Search is an full stack web application that allows users to search
 
 
 
-## Getting Started
+## Live Site
 
 
 [Artist-Venue Search](https://robertmoore40.github.io/Venue-Search/)
