@@ -4,9 +4,9 @@ Artist Venue Search is an full stack web application that allows users to search
 
 # Pictures
 
-<img src="../workingpics/Capture1.png" alt="Capture 1"/>
-<img src="../workingpics/Capture2.png" alt="Capture 2"/>
-<img src="../workingpics/Capture3.png" alt="Capture 3"/>
+<img src="/workingpics/Capture1.png" alt="Capture 1" width="250" />
+<img src="/workingpics/Capture2.png" alt="Capture 2" width="250"/>
+<img src="/workingpics/Capture3.png" alt="Capture 3" width="250"/>
 
 
 ## Getting Started
