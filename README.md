@@ -8,7 +8,7 @@ Artist Venue Search is an full stack web application that allows users to search
 <img src="images/Capture2.png" alt="Capture 2" width="250"/>
 <img src="images/Capture3.png" alt="Capture 3" width="250"/>
 
-![picture](github.com/robertmoore40/Venue-Search/blob/master/images/Capture1.png)
+![picture](https://github.com/robertmoore40/Venue-Search/blob/master/images/Capture1.PNG)
 ![picture](images/Capture2.png)
 ![picture](images/Capture3.png)
 
