@@ -4,10 +4,10 @@ Artist Venue Search is an full stack web application that allows users to search
 
 # How To Use
 
--Clone/Fork and download files.
--Make a firebase account.
--Add firebase information to files.
--Deploy the repo on github.
+* Clone/Fork and download files.
+* Make a firebase account.
+* Add firebase information to files.
+* Deploy the repo on github.
 
 
 
