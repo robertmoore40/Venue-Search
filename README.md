@@ -2,6 +2,15 @@
 
 Artist Venue Search is an full stack web application that allows users to search artists and find their top songs and upcoming venues
 
+# How To Use
+
+-Clone/Fork and download files 
+-Make a firebase account
+-Add firebase information to files
+-Deploy the repo on github
+
+
+
 # Pictures
 
 
